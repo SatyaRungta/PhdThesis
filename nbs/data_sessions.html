@@ -1,0 +1,1590 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>&lt;no title&gt; &#8212; Neurophys</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/nbsphinx-code-cells.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'nbs/data_sessions';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/IISc_logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/IISc_logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../rst/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/introduction.html">Introduction</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rst/modules.html">Chapter 1</a><input checked class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rst/pyfiles.html">Scripts</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst/utils.html">Utility functions</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst/utils.funcs.html">Loading data and information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst/utils.plots.html">Figures, Plots and visualisations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst/utils.preprocessing.html">Signal Preprocessing module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst/utils.spikes.html">Spikes isolation and extraction</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/summary.html">Summary and conclusion</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/SatyaRungta/Eye_movement_signatures_in_neck_muscles" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/nbs/data_sessions.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Root path and directory</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">ROOT_PATH</span> <span class="o">=</span> <span class="s2">&quot;E:/ADS/python/ams/isaccade&quot;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">ROOT_PATH</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Packages</span>
+<span class="kn">import</span> <span class="nn">h5py</span> <span class="k">as</span> <span class="nn">hy</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">scipy.io</span> <span class="k">as</span> <span class="nn">spy</span>
+<span class="kn">import</span> <span class="nn">utils.funcs.readMatfiles</span> <span class="k">as</span> <span class="nn">readmat</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Folders and File path</span>
+<span class="n">ROOT_PATH</span> <span class="o">=</span> <span class="s2">&quot;E:/ADS/python/ams/isaccade&quot;</span>
+<span class="n">get_data</span>  <span class="o">=</span> <span class="s2">&quot;data&quot;</span>
+<span class="n">task</span>      <span class="o">=</span> <span class="s2">&quot;MG&quot;</span>
+<span class="n">recordings</span> <span class="o">=</span> <span class="s2">&quot;fef&quot;</span>
+<span class="n">analysis</span>   <span class="o">=</span> <span class="s2">&quot;sessions&quot;</span>
+<span class="n">subject</span>    <span class="o">=</span> <span class="s2">&quot;m1&quot;</span>
+<span class="n">session_date</span> <span class="o">=</span> <span class="s2">&quot;Apr26b&quot;</span>
+
+<span class="n">fpath</span> <span class="o">=</span> <span class="s2">&quot;/&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">ROOT_PATH</span><span class="p">,</span><span class="n">get_data</span><span class="p">,</span><span class="n">task</span><span class="p">,</span><span class="n">recordings</span><span class="p">,</span><span class="n">analysis</span><span class="p">,</span><span class="n">subject</span><span class="p">,</span><span class="n">session_date</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fpath</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+E:/ADS/python/ams/isaccade/data/MG/fef/sessions/m1/Apr26b
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># File details</span>
+<span class="c1">#file  = &quot;DETAILS_all.mat&quot;</span>
+
+<span class="n">file</span>     <span class="o">=</span> <span class="s2">&quot;MG_Jaggu_bkl.mat&quot;</span>
+
+<span class="c1">#file = &quot;Neuron.mat&quot;</span>
+<span class="c1">#file = &quot;Neuron_MERGED.mat&quot;</span>
+
+<span class="c1">#file = &quot;UNITS_all.mat&quot;</span>
+
+<span class="n">filename</span> <span class="o">=</span> <span class="n">fpath</span><span class="o">+</span><span class="s1">&#39;/&#39;</span><span class="o">+</span><span class="n">file</span>
+<span class="n">filename</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;E:/ADS/python/ams/isaccade/data/MG/fef/sessions/m1/Apr26b/MG_Jaggu_bkl.mat&#39;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Reading mat file</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">readmat</span><span class="o">.</span><span class="n">load_data</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Opening mat file v7.0 Path: E:/ADS/python/ams/isaccade/data/MG/fef/sessions/m1/Apr26b/MG_Jaggu_bkl.mat
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Variables</th>
+      <th>Type</th>
+      <th>Fields</th>
+      <th>Dim</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Events</td>
+      <td>dict</td>
+      <td>[Abort_, Bot_, Correct_, EmStart_, Eot_, FixSp...</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Eye_</td>
+      <td>dict</td>
+      <td>[NormX_, NormY_, Saccade_]</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Infos_</td>
+      <td>ndarray</td>
+      <td>float64</td>
+      <td>(93, 59)</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Raw_</td>
+      <td>dict</td>
+      <td>[data]</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Result</td>
+      <td>dict</td>
+      <td>[Correct, Success_eye, Success_eye2, Wrong_eye...</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Timings_</td>
+      <td>dict</td>
+      <td>[Fix_on_, Go_, Target_, Trig_, Trigger_]</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Trialinfo_</td>
+      <td>dict</td>
+      <td>[ht, pos, result]</td>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A. Event marker for each trial (Tempo Reflecting  system)</span>
+<span class="n">Events_per_trial</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;EmStart_&#39;</span><span class="p">,</span><span class="s1">&#39;Bot_&#39;</span><span class="p">,</span><span class="s1">&#39;FixSpotOn_&#39;</span><span class="p">,</span><span class="s1">&#39;Trigger_&#39;</span><span class="p">,</span><span class="s1">&#39;Target_&#39;</span><span class="p">,</span><span class="s1">&#39;FixSpotOff_&#39;</span><span class="p">,</span><span class="s1">&#39;Correct_&#39;</span><span class="p">,</span><span class="s1">&#39;Reward_&#39;</span><span class="p">,</span><span class="s1">&#39;Abort_&#39;</span><span class="p">,</span><span class="s1">&#39;Eot_&#39;</span><span class="p">]</span>
+
+<span class="n">readmat</span><span class="o">.</span><span class="n">show_info</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Events&#39;</span><span class="p">])</span>
+<span class="n">Events</span> <span class="o">=</span> <span class="n">readmat</span><span class="o">.</span><span class="n">dict2array</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Events&#39;</span><span class="p">])</span>
+<span class="n">Events</span><span class="p">[</span><span class="n">Events_per_trial</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Variables</th>
+      <th>Type</th>
+      <th>Fields</th>
+      <th>Dim</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Abort_</td>
+      <td>ndarray</td>
+      <td>float64</td>
+      <td>(93, 2)</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Bot_</td>
+      <td>ndarray</td>
+      <td>float64</td>
+      <td>(93, 2)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Correct_</td>
+      <td>ndarray</td>
+      <td>float64</td>
+      <td>(93, 2)</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>EmStart_</td>
+      <td>ndarray</td>
+      <td>float64</td>
+      <td>(93, 2)</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Eot_</td>
+      <td>ndarray</td>
+      <td>float64</td>
+      <td>(93, 2)</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>FixSpotOff_</td>
+      <td>ndarray</td>
+      <td>float64</td>
+      <td>(93, 2)</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>FixSpotOn_</td>
+      <td>ndarray</td>
+      <td>float64</td>
+      <td>(93, 2)</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Reward_</td>
+      <td>ndarray</td>
+      <td>float64</td>
+      <td>(93, 2)</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Target_</td>
+      <td>ndarray</td>
+      <td>float64</td>
+      <td>(93, 2)</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Trigger_</td>
+      <td>ndarray</td>
+      <td>float64</td>
+      <td>(93, 2)</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>EmStart_</th>
+      <th>Bot_</th>
+      <th>FixSpotOn_</th>
+      <th>Trigger_</th>
+      <th>Target_</th>
+      <th>FixSpotOff_</th>
+      <th>Correct_</th>
+      <th>Reward_</th>
+      <th>Abort_</th>
+      <th>Eot_</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.0</td>
+      <td>957.0</td>
+      <td>966.0</td>
+      <td>1201.0</td>
+      <td>1206.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1404.0</td>
+      <td>2043.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.0</td>
+      <td>810.0</td>
+      <td>824.0</td>
+      <td>1201.0</td>
+      <td>1208.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2054.0</td>
+      <td>2693.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.0</td>
+      <td>918.0</td>
+      <td>925.0</td>
+      <td>2173.0</td>
+      <td>1213.0</td>
+      <td>2207.0</td>
+      <td>2541.0</td>
+      <td>2542.0</td>
+      <td>NaN</td>
+      <td>3234.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.0</td>
+      <td>894.0</td>
+      <td>910.0</td>
+      <td>2041.0</td>
+      <td>1215.0</td>
+      <td>2080.0</td>
+      <td>2440.0</td>
+      <td>2441.0</td>
+      <td>NaN</td>
+      <td>3133.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.0</td>
+      <td>840.0</td>
+      <td>852.0</td>
+      <td>2298.0</td>
+      <td>1205.0</td>
+      <td>2344.0</td>
+      <td>2654.0</td>
+      <td>2655.0</td>
+      <td>NaN</td>
+      <td>3347.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>88</th>
+      <td>0.0</td>
+      <td>893.0</td>
+      <td>898.0</td>
+      <td>2153.0</td>
+      <td>1203.0</td>
+      <td>2197.0</td>
+      <td>2514.0</td>
+      <td>2515.0</td>
+      <td>NaN</td>
+      <td>3207.0</td>
+    </tr>
+    <tr>
+      <th>89</th>
+      <td>0.0</td>
+      <td>857.0</td>
+      <td>873.0</td>
+      <td>2107.0</td>
+      <td>1210.0</td>
+      <td>2140.0</td>
+      <td>2463.0</td>
+      <td>2464.0</td>
+      <td>NaN</td>
+      <td>3156.0</td>
+    </tr>
+    <tr>
+      <th>90</th>
+      <td>0.0</td>
+      <td>935.0</td>
+      <td>948.0</td>
+      <td>2148.0</td>
+      <td>1204.0</td>
+      <td>2182.0</td>
+      <td>2485.0</td>
+      <td>2486.0</td>
+      <td>NaN</td>
+      <td>3178.0</td>
+    </tr>
+    <tr>
+      <th>91</th>
+      <td>0.0</td>
+      <td>814.0</td>
+      <td>826.0</td>
+      <td>1201.0</td>
+      <td>1211.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1920.0</td>
+      <td>2559.0</td>
+    </tr>
+    <tr>
+      <th>92</th>
+      <td>0.0</td>
+      <td>870.0</td>
+      <td>883.0</td>
+      <td>2141.0</td>
+      <td>1203.0</td>
+      <td>2182.0</td>
+      <td>2508.0</td>
+      <td>2509.0</td>
+      <td>NaN</td>
+      <td>3201.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>93 rows × 10 columns</p>
+</div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># B. Event timings (From BOT)</span>
+<span class="n">Events_per_trial</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Fix_on_&#39;</span><span class="p">,</span><span class="s1">&#39;Trig_&#39;</span><span class="p">,</span><span class="s1">&#39;Target_&#39;</span><span class="p">,</span><span class="s1">&#39;Go_&#39;</span><span class="p">,</span><span class="s1">&#39;Trigger_&#39;</span><span class="p">]</span>
+
+<span class="n">readmat</span><span class="o">.</span><span class="n">show_info</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Timings_&#39;</span><span class="p">])</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">readmat</span><span class="o">.</span><span class="n">dict2array</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Timings_&#39;</span><span class="p">])</span>
+<span class="n">result</span><span class="p">[</span><span class="n">Events_per_trial</span><span class="p">]</span>
+
+<span class="c1"># Fix_on_ = FixateOn - Bot</span>
+<span class="c1"># Trig_   = Trigger - Bot</span>
+<span class="c1"># Target_ = Target - Bot</span>
+<span class="c1"># Go_     = FixateOff - Bot</span>
+
+<span class="c1"># Trigger_ = Trig_*[sampling rate (Blackrock)]/[sampling rate (Tempo)] (verify..)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Variables</th>
+      <th>Type</th>
+      <th>Fields</th>
+      <th>Dim</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Fix_on_</td>
+      <td>ndarray</td>
+      <td>float64</td>
+      <td>(93, 1)</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Go_</td>
+      <td>ndarray</td>
+      <td>float64</td>
+      <td>(93, 1)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Target_</td>
+      <td>ndarray</td>
+      <td>float64</td>
+      <td>(93, 1)</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Trig_</td>
+      <td>ndarray</td>
+      <td>float64</td>
+      <td>(93, 1)</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Trigger_</td>
+      <td>ndarray</td>
+      <td>float64</td>
+      <td>(93, 1)</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Fix_on_</th>
+      <th>Trig_</th>
+      <th>Target_</th>
+      <th>Go_</th>
+      <th>Trigger_</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>9.0</td>
+      <td>244.0</td>
+      <td>249.0</td>
+      <td>NaN</td>
+      <td>7582.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>14.0</td>
+      <td>391.0</td>
+      <td>398.0</td>
+      <td>NaN</td>
+      <td>12168.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>7.0</td>
+      <td>1255.0</td>
+      <td>295.0</td>
+      <td>1289.0</td>
+      <td>8798.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>16.0</td>
+      <td>1147.0</td>
+      <td>321.0</td>
+      <td>1186.0</td>
+      <td>9547.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>12.0</td>
+      <td>1458.0</td>
+      <td>365.0</td>
+      <td>1504.0</td>
+      <td>11232.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>88</th>
+      <td>5.0</td>
+      <td>1260.0</td>
+      <td>310.0</td>
+      <td>1304.0</td>
+      <td>9578.0</td>
+    </tr>
+    <tr>
+      <th>89</th>
+      <td>16.0</td>
+      <td>1250.0</td>
+      <td>353.0</td>
+      <td>1283.0</td>
+      <td>10702.0</td>
+    </tr>
+    <tr>
+      <th>90</th>
+      <td>13.0</td>
+      <td>1213.0</td>
+      <td>269.0</td>
+      <td>1247.0</td>
+      <td>8268.0</td>
+    </tr>
+    <tr>
+      <th>91</th>
+      <td>12.0</td>
+      <td>387.0</td>
+      <td>397.0</td>
+      <td>NaN</td>
+      <td>12043.0</td>
+    </tr>
+    <tr>
+      <th>92</th>
+      <td>13.0</td>
+      <td>1271.0</td>
+      <td>333.0</td>
+      <td>1312.0</td>
+      <td>10296.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>93 rows × 5 columns</p>
+</div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#(result[&#39;Trigger_&#39;]/result[&#39;Trig_&#39;])/1.041</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s1">&#39;Go_&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;Target_&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># C. Trials Info</span>
+<span class="n">ht</span>     <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Trialinfo_&#39;</span><span class="p">][</span><span class="s1">&#39;ht&#39;</span><span class="p">]</span>
+<span class="n">pos</span>    <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Trialinfo_&#39;</span><span class="p">][</span><span class="s1">&#39;pos&#39;</span><span class="p">]</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Trialinfo_&#39;</span><span class="p">][</span><span class="s1">&#39;result&#39;</span><span class="p">]</span>
+
+<span class="n">readmat</span><span class="o">.</span><span class="n">show_info</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Trialinfo_&#39;</span><span class="p">])</span>
+<span class="n">trial_info</span> <span class="o">=</span> <span class="n">readmat</span><span class="o">.</span><span class="n">dict2array</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Trialinfo_&#39;</span><span class="p">])</span>
+<span class="n">display</span><span class="p">(</span><span class="n">trial_info</span><span class="p">)</span>
+<span class="n">a</span><span class="o">-</span><span class="n">trial_info</span><span class="p">[</span><span class="s1">&#39;ht&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Variables</th>
+      <th>Type</th>
+      <th>Fields</th>
+      <th>Dim</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ht</td>
+      <td>ndarray</td>
+      <td>float64</td>
+      <td>(93, 1)</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>pos</td>
+      <td>ndarray</td>
+      <td>float64</td>
+      <td>(93, 1)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>result</td>
+      <td>ndarray</td>
+      <td>float64</td>
+      <td>(93, 1)</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ht</th>
+      <th>pos</th>
+      <th>result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>956.0</td>
+      <td>4.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>964.0</td>
+      <td>4.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>995.0</td>
+      <td>4.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>856.0</td>
+      <td>4.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1134.0</td>
+      <td>4.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>88</th>
+      <td>985.0</td>
+      <td>5.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>89</th>
+      <td>930.0</td>
+      <td>3.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>90</th>
+      <td>979.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>91</th>
+      <td>948.0</td>
+      <td>0.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>92</th>
+      <td>972.0</td>
+      <td>7.0</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>93 rows × 3 columns</p>
+</div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+0     NaN
+1     NaN
+2    -1.0
+3     9.0
+4     5.0
+     ...
+88    9.0
+89    0.0
+90   -1.0
+91    NaN
+92    7.0
+Length: 93, dtype: float64
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># D. Trial Results</span>
+<span class="n">readmat</span><span class="o">.</span><span class="n">show_info</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Result&#39;</span><span class="p">])</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">readmat</span><span class="o">.</span><span class="n">dict2array</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Result&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Variables</th>
+      <th>Type</th>
+      <th>Fields</th>
+      <th>Dim</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Correct</td>
+      <td>ndarray</td>
+      <td>float64</td>
+      <td>(93, 1)</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Success_eye</td>
+      <td>ndarray</td>
+      <td>float64</td>
+      <td>(93, 1)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Success_eye2</td>
+      <td>ndarray</td>
+      <td>float64</td>
+      <td>(93, 1)</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Wrong_eye</td>
+      <td>ndarray</td>
+      <td>float64</td>
+      <td>(93, 1)</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Wrong_eye2</td>
+      <td>ndarray</td>
+      <td>float64</td>
+      <td>(93, 1)</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># E. Eye movements and traces</span>
+<span class="n">readmat</span><span class="o">.</span><span class="n">show_info</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Eye_&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Variables</th>
+      <th>Type</th>
+      <th>Fields</th>
+      <th>Dim</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>NormX_</td>
+      <td>ndarray</td>
+      <td>float64</td>
+      <td>(93, 1500)</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>NormY_</td>
+      <td>ndarray</td>
+      <td>float64</td>
+      <td>(93, 1500)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Saccade_</td>
+      <td>ndarray</td>
+      <td>float64</td>
+      <td>(93, 3)</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Eye_&#39;</span><span class="p">][</span><span class="s1">&#39;NormX_&#39;</span><span class="p">]</span>
+<span class="n">y</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Eye_&#39;</span><span class="p">][</span><span class="s1">&#39;NormY_&#39;</span><span class="p">]</span>
+
+<span class="n">onsets</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Eye_&#39;</span><span class="p">][</span><span class="s1">&#39;Saccade_&#39;</span><span class="p">]</span><span class="o">/</span><span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">trial_no</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="n">vl</span> <span class="o">=</span> <span class="n">Events</span><span class="p">[</span><span class="s1">&#39;FixSpotOff_&#39;</span><span class="p">][</span><span class="n">trial_no</span><span class="p">]</span><span class="o">/</span><span class="mi">4</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vl</span><span class="p">)</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="n">trial_no</span><span class="p">,:],</span><span class="s1">&#39;-k&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">trial_no</span><span class="p">,:],</span><span class="s1">&#39;-r&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">vl</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+563.0
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;matplotlib.lines.Line2D at 0x226808c81d0&gt;
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/nbs_data_sessions_12_2.png" src="../_images/nbs_data_sessions_12_2.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">## Animation for gif</span>
+
+<span class="sd">from PIL import Image</span>
+
+<span class="sd"># Take list of paths for images</span>
+<span class="sd">image_path_list = [&#39;dog-1.jpg&#39;, &#39;dog-2.jpg&#39;, &#39;dog-3.jpg&#39;]</span>
+
+<span class="sd"># Create a list of image objects</span>
+<span class="sd">image_list = [Image.open(file) for file in image_path_list]</span>
+
+<span class="sd"># Save the first image as a GIF file</span>
+<span class="sd">image_list[0].save(</span>
+<span class="sd">            &#39;animation.gif&#39;,</span>
+<span class="sd">            save_all=True,</span>
+<span class="sd">            append_images=image_list[1:], # append rest of the images</span>
+<span class="sd">            duration=1000, # in milliseconds</span>
+<span class="sd">            loop=0)</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<br/></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#34;\n## Animation for gif\n\nfrom PIL import Image\n\n# Take list of paths for images\nimage_path_list = [&#39;dog-1.jpg&#39;, &#39;dog-2.jpg&#39;, &#39;dog-3.jpg&#39;]\n\n# Create a list of image objects\nimage_list = [Image.open(file) for file in image_path_list]\n\n# Save the first image as a GIF file\nimage_list[0].save(\n            &#39;animation.gif&#39;,\n            save_all=True,\n            append_images=image_list[1:], # append rest of the images\n            duration=1000, # in milliseconds\n            loop=0)\n\n&#34;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd"># importing matplot lib</span>
+<span class="sd">import matplotlib.pyplot as plt</span>
+<span class="sd">import numpy as np</span>
+
+<span class="sd"># importing movie py libraries</span>
+<span class="sd">from moviepy.editor import VideoClip</span>
+<span class="sd">from moviepy.video.io.bindings import mplfig_to_npimage</span>
+
+<span class="sd"># numpy array</span>
+<span class="sd">x = np.linspace(-2, 2, 200)</span>
+
+<span class="sd"># duration of the video</span>
+<span class="sd">duration = 2</span>
+
+<span class="sd"># matplot subplot</span>
+<span class="sd">fig, ax = plt.subplots()</span>
+
+<span class="sd"># method to get frames</span>
+<span class="sd">def make_frame(t):</span>
+
+<span class="sd">    # clear</span>
+<span class="sd">    ax.clear()</span>
+
+<span class="sd">    # plotting line</span>
+<span class="sd">    ax.plot(x, np.sinc(x**2) + np.sin(x + 2 * np.pi / duration * t), lw = 3)</span>
+<span class="sd">    ax.set_ylim(-1.5, 2.5)</span>
+
+<span class="sd">    # returning numpy image</span>
+<span class="sd">    return mplfig_to_npimage(fig)</span>
+
+<span class="sd"># creating animation</span>
+<span class="sd">animation = VideoClip(make_frame, duration = duration)</span>
+
+<span class="sd"># displaying animation with auto play and looping</span>
+<span class="sd">animation.ipython_display(fps = 20, loop = True, autoplay = True)</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;\n# importing matplot lib\nimport matplotlib.pyplot as plt\nimport numpy as np\n\n# importing movie py libraries\nfrom moviepy.editor import VideoClip\nfrom moviepy.video.io.bindings import mplfig_to_npimage\n\n# numpy array\nx = np.linspace(-2, 2, 200)\n\n# duration of the video\nduration = 2\n\n# matplot subplot\nfig, ax = plt.subplots()\n\n# method to get frames\ndef make_frame(t):\n\t\n\t# clear\n\tax.clear()\n\t\n\t# plotting line\n\tax.plot(x, np.sinc(x**2) + np.sin(x + 2 * np.pi / duration * t), lw = 3)\n\tax.set_ylim(-1.5, 2.5)\n\t\n\t# returning numpy image\n\treturn mplfig_to_npimage(fig)\n\n# creating animation\nanimation = VideoClip(make_frame, duration = duration)\n\n# displaying animation with auto play and looping\nanimation.ipython_display(fps = 20, loop = True, autoplay = True)\n\n&#39;
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Satya Rungta
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023, Rehabilitation centre for Movement and cognitive disorders.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
